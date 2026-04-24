@@ -33,7 +33,7 @@ The initial dataset check was performed to understand if there is any cleaning i
 The cleaning process followed column-specific logic to preserve data integrity:
 
 #### Numeric Cleaning (Age, Price, Quantity)
-* **df["column"] = pd.to_numeric(df["column"], errors="coerce")**: Converted the column's Data Type to numeric, forcing non-numeric values to `NaN`.
+* **df["column"] = pd.to_numeric(df["column"], errors="coerce")**: Converted the column's Data Type to numeric, forcing non-numeric values to "NaN".
 * **df["column"] = df["column"].fillna(df["column"].median())**: Filled missing values (in "Age" and "Price" columns) with the **Median**.
 * **df["column"] = df["column"].abs()**: Converted negative values (in "Quantity" and "Age" columns) to positive ones.
 
